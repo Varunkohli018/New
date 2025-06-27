@@ -1,0 +1,287 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image to PDF converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #eee;
+      text-align: center;
+    }header {
+  background-color: #8B0000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+main {
+  padding: 40px 20px;
+}
+
+.center-icon {
+  width: 100px;
+  margin-top: 30px;
+}
+
+.no-images-text {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.instruction {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: #8B0000;
+  border: none;
+  border-radius: 50%;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.3);
+}
+
+.menu-drawer {
+  position: fixed;
+  bottom: -300px;
+  left: 0;
+  right: 0;
+  background-color: #2c2c2c;
+  color: #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+  transition: bottom 0.3s ease-in-out;
+  z-index: 100;
+}
+
+.menu-drawer.active {
+  bottom: 0;
+}
+
+.drawer-header {
+  background-color: #a50000;
+  padding: 16px;
+  font-size: 18px;
+  text-align: center;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.menu-drawer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-drawer li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-bottom: 1px solid #444;
+  font-size: 16px;
+}
+
+.menu-drawer li img {
+  width: 20px;
+  height: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Image to PDF converter</h1>
+    <div class="menu-icon">⋮</div>
+  </header>  <main>
+    <img src="image-icon.png" alt="Image Icon" class="center-icon" />
+    <p class="no-images-text">No images selected.</p>
+    <p class="instruction">Select some images first on the add button below.</p>
+  </main><button class="fab" onclick="openFilePicker()">+</button>
+
+  <!-- Floating Menu Drawer -->  <div class="menu-drawer" id="menuDrawer">
+    <div class="drawer-header">Image to PDF converter</div>
+    <ul>
+      <li><img src="icons/pdf.png" /> PDF Files</li>
+      <li><img src="icons/share.png" /> Share app</li>
+      <li><img src="icons/feedback.png" /> Leave a feedback</li>
+      <li><img src="icons/policy.png" /> Privacy Policy</li>
+    </ul>
+  </div>  <script>
+    function openFilePicker() {
+      alert("Image Picker Coming");
+    }
+
+    document.querySelector(".menu-icon").addEventListener("click", function () {
+      document.getElementById("menuDrawer").classList.toggle("active");
+    });
+  </script></body>
+</html><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image to PDF converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #eee;
+      text-align: center;
+    }header {
+  background-color: #8B0000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+main {
+  padding: 40px 20px;
+}
+
+.center-icon {
+  width: 100px;
+  margin-top: 30px;
+}
+
+.no-images-text {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.instruction {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: #8B0000;
+  border: none;
+  border-radius: 50%;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.3);
+}
+
+.menu-drawer {
+  position: fixed;
+  bottom: -300px;
+  left: 0;
+  right: 0;
+  background-color: #2c2c2c;
+  color: #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+  transition: bottom 0.3s ease-in-out;
+  z-index: 100;
+}
+
+.menu-drawer.active {
+  bottom: 0;
+}
+
+.drawer-header {
+  background-color: #a50000;
+  padding: 16px;
+  font-size: 18px;
+  text-align: center;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.menu-drawer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-drawer li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-bottom: 1px solid #444;
+  font-size: 16px;
+}
+
+.menu-drawer li img {
+  width: 20px;
+  height: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Image to PDF converter</h1>
+    <div class="menu-icon">⋮</div>
+  </header>  <main>
+    <img src="image-icon.png" alt="Image Icon" class="center-icon" />
+    <p class="no-images-text">No images selected.</p>
+    <p class="instruction">Select some images first on the add button below.</p>
+  </main><button class="fab" onclick="openFilePicker()">+</button>
+
+  <!-- Floating Menu Drawer -->  <div class="menu-drawer" id="menuDrawer">
+    <div class="drawer-header">Image to PDF converter</div>
+    <ul>
+      <li><img src="icons/pdf.png" /> PDF Files</li>
+      <li><img src="icons/share.png" /> Share app</li>
+      <li><img src="icons/feedback.png" /> Leave a feedback</li>
+      <li><img src="icons/policy.png" /> Privacy Policy</li>
+    </ul>
+  </div>  <script>
+    function openFilePicker() {
+      alert("Image Picker Coming");
+    }
+
+    document.querySelector(".menu-icon").addEventListener("click", function () {
+      document.getElementById("menuDrawer").classList.toggle("active");
+    });
+  </script></body>
+</html>
